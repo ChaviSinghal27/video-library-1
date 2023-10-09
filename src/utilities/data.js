@@ -3,8 +3,8 @@ export const data = {
     {
       VideoLink: (
         <iframe
-          width="560"
-          height="315"
+          width="300"
+          height="200"
           src="https://www.youtube.com/embed/GcPxHuTCwjk?si=KTRW8KAnHiYr0o5Q"
           title="YouTube video player"
           frameborder="0"
@@ -22,8 +22,8 @@ export const data = {
     {
       VideoLink: (
         <iframe
-          width="560"
-          height="315"
+          width="300"
+          height="200"
           src="https://www.youtube.com/embed/dmmPe9PO1zc?si=f5lLGZhuSHuBnKAE"
           title="YouTube video player"
           frameborder="0"
@@ -41,8 +41,8 @@ export const data = {
     {
       VideoLink: (
         <iframe
-          width="560"
-          height="315"
+          width="300"
+          height="200"
           src="https://www.youtube.com/embed/gepPRzi8yZo?si=VLgPGg8J5w-_lT8G"
           title="YouTube video player"
           frameborder="0"
@@ -59,8 +59,8 @@ export const data = {
     {
       VideoLink: (
         <iframe
-          width="560"
-          height="315"
+          width="300"
+          height="200"
           src="https://www.youtube.com/embed/oAiOU_ysSVw?si=1xjaRY8rusCiZ6jj"
           title="YouTube video player"
           frameborder="0"
