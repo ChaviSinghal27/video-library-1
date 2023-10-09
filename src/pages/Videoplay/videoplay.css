@@ -1,0 +1,25 @@
+.videoplay-content {
+  margin: 100px;
+  height: 700px;
+  width: 1000px;
+}
+
+.videolink {
+  margin-left: 100px;
+}
+
+.video-description {
+  display: flex;
+  margin-left: 150px;
+  justify-content: space-between;
+}
+
+.video-info {
+  display: flex;
+  gap: 10px;
+}
+
+.video-buttons {
+  display: flex;
+  gap: 10px;
+}
