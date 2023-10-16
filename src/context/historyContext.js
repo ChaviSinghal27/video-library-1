@@ -1,12 +1,30 @@
-import { useContext, useState } from "react";
+import { useContext, useReducer, useState } from "react";
 import { createContext } from "react";
 
 const HistoryContext = createContext();
 
+const historyHandler = (state, action) => {
+  switch (action.type) {
+    case "HISTORY":
+      return (state = {
+        ...state,
+        addToHistory:
+          state.addToHistory.length === 0
+            ? [action.payload]
+            : [...state.addToHistory, action.payload],
+      });
+
+    default:
+      return state;
+  }
+};
+
 const HistoryProvider = ({ children }) => {
-  const [addToHistory, setAddToHistory] = useState([]);
+  const [state, dispatch] = useReducer(historyHandler, {
+    addToHistory: [],
+  });
   return (
-    <HistoryContext.Provider value={{ addToHistory, setAddToHistory }}>
+    <HistoryContext.Provider value={{ state, dispatch }}>
       {children}
     </HistoryContext.Provider>
   );
