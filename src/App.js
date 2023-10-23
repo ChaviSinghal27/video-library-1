@@ -1,11 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Home } from "./pages/Home/home";
+
+import { Navbar } from "./components/Navbar";
+import { LeftBar } from "./components/Leftbar";
+import { Router } from "./Router/Router";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Navbar />
+      <LeftBar />
+      <Router />
     </div>
   );
 }
