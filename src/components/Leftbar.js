@@ -1,13 +1,14 @@
 import "../pages/Home/home.css";
+import { Link } from "react-router-dom";
 
 export function LeftBar() {
   return (
     <div>
       <div className="leftbar-component">
         <div>
-          <button>
+          <Link to="/">
             <i class="fa-solid fa-compass"></i>
-          </button>
+          </Link>
           <p>Explore</p>
         </div>
         <div>
@@ -17,21 +18,21 @@ export function LeftBar() {
           <p>Watchlist</p>
         </div>
         <div>
-          <button>
+          <Link to="/History">
             <i class="fa-solid fa-clock-rotate-left"></i>
-          </button>
+          </Link>
           <p>History</p>
         </div>
         <div>
-          <button>
+          <Link to="/like">
             <i class="fa-solid fa-thumbs-up"></i>
-          </button>
+          </Link>
           <p>Liked</p>
         </div>
         <div>
-          <button>
+          <Link to="/playlist">
             <i class="fa-solid fa-list-check"></i>
-          </button>
+          </Link>
           <p>playlist</p>
         </div>
       </div>

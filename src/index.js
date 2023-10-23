@@ -6,12 +6,16 @@ import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { HistoryProvider } from "./context/historyContext";
 
+import { PlaylistProvider } from "./context/playlistContext";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <HistoryProvider>
-        <App />
+        <PlaylistProvider>
+          <App />
+        </PlaylistProvider>
       </HistoryProvider>
     </Router>
   </React.StrictMode>

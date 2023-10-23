@@ -1,4 +1,4 @@
-import { useContext, useReducer, useState } from "react";
+import { useContext, useReducer } from "react";
 import { createContext } from "react";
 
 const HistoryContext = createContext();
