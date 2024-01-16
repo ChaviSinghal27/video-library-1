@@ -12,6 +12,14 @@ const dataHandler = (state, action) => {
             ? [action.payload]
             : [...state.addToPlaylist, action.payload],
       });
+    case "REMOVE_FROM_PLAYLIST":
+      return (state = {
+        ...state,
+        addToPlaylist: [
+          ...state.addToPlaylist.filter((id) => id !== action.payload),
+        ],
+      });
+
     case "LIKE":
       return (state = {
         ...state,
@@ -19,6 +27,11 @@ const dataHandler = (state, action) => {
           state.addToLike.length === 0
             ? [action.payload]
             : [...state.addToLike, action.payload],
+      });
+    case "REMOVE_FROM_LIKE":
+      return (state = {
+        ...state,
+        addToLike: [...state.addToLike.filter((id) => id !== action.payload)],
       });
     default:
       return state;

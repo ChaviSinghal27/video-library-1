@@ -8,9 +8,10 @@ export function Navbar() {
           <div className="logo">
             <p>WeWatch</p>
           </div>
-          <div className="search-bar">
-            <input placeholder="search" />
-            <button>search</button>
+          <div className="search">
+            <input className="search-bar" placeholder="search" />
+
+            <button className="search-button">search</button>
           </div>
           <div className="nav-items">
             <p>setting</p>

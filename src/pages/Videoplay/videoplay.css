@@ -1,25 +1,40 @@
 .videoplay-content {
-  margin: 100px;
-  height: 700px;
-  width: 1000px;
-}
-
-.videolink {
-  margin-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
 
 .video-description {
   display: flex;
-  margin-left: 150px;
+  width: 90%;
   justify-content: space-between;
 }
 
 .video-info {
-  display: flex;
-  gap: 10px;
+  text-align: left;
+  padding-top: 20px;
+  font-size: 1.5em;
 }
 
-.video-buttons {
-  display: flex;
-  gap: 10px;
+.video-buttons button {
+  padding-top: 20px;
+  border: none;
+  background-color: rgb(242, 242, 242);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2em;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.border {
+  height: 2px;
+  width: 80vw;
+  background-color: rgb(223, 207, 207);
+  margin-top: 10px;
+}
+
+.related {
+  text-align: left;
+  font-size: 2rem;
 }

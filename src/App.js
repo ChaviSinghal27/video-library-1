@@ -7,9 +7,18 @@ import { Router } from "./Router/Router";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <LeftBar />
-      <Router />
+      <div className="nav-component">
+        <Navbar />
+      </div>
+
+      <div>
+        <div>
+          <LeftBar />
+        </div>
+        <div className="app-content">
+          <Router />
+        </div>
+      </div>
     </div>
   );
 }

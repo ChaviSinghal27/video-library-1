@@ -1,40 +1,52 @@
 import "../pages/Home/home.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function LeftBar() {
   return (
     <div>
       <div className="leftbar-component">
-        <div>
-          <Link to="/">
+        <div className="leftbar-icon">
+          <NavLink
+            to="/"
+            style={({ isActive }) => ({ color: isActive ? "red" : "black" })}
+          >
             <i class="fa-solid fa-compass"></i>
-          </Link>
-          <p>Explore</p>
+          </NavLink>
         </div>
-        <div>
-          <button>
+        <p>Explore</p>
+        <div className="leftbar-icon">
+          <NavLink style={{ color: "black" }}>
             <i class="fa-solid fa-clock"></i>
-          </button>
-          <p>Watchlist</p>
+          </NavLink>
         </div>
-        <div>
-          <Link to="/History">
+        <p>Watchlist</p>
+        <div className="leftbar-icon">
+          <NavLink
+            to="/History"
+            style={({ isActive }) => ({ color: isActive ? "red" : "black" })}
+          >
             <i class="fa-solid fa-clock-rotate-left"></i>
-          </Link>
-          <p>History</p>
+          </NavLink>
         </div>
-        <div>
-          <Link to="/like">
+        <p>History</p>
+        <div className="leftbar-icon">
+          <NavLink
+            to="/like"
+            style={({ isActive }) => ({ color: isActive ? "red" : "black" })}
+          >
             <i class="fa-solid fa-thumbs-up"></i>
-          </Link>
-          <p>Liked</p>
+          </NavLink>
         </div>
-        <div>
-          <Link to="/playlist">
+        <p>Liked</p>
+        <div className="leftbar-icon">
+          <NavLink
+            to="/playlist"
+            style={({ isActive }) => ({ color: isActive ? "red" : "black" })}
+          >
             <i class="fa-solid fa-list-check"></i>
-          </Link>
-          <p>playlist</p>
+          </NavLink>
         </div>
+        <p>playlist</p>
       </div>
     </div>
   );
