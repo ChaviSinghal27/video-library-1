@@ -1,26 +1,12 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-primary);
+
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
 }
 
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.navbar {
-  padding: 10px 0;
-  text-align: center;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
+.page-wrapper {
+  height: 100vh;
 }
 
 .leftbar-component {
@@ -28,59 +14,85 @@ body {
   display: flex;
   flex-direction: column;
   padding-right: 10px;
-  width: 8%;
-  height: 100vh;
-  border-right: 2px solid grey;
+  width: 10%;
+
+  border-right: 1px solid var(--color-secondary);
   align-items: center;
+  vertical-align: middle;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 0.9em;
+  height: 100vh;
+  justify-content: space-around;
 }
 
 .leftbar-icon {
-  font-size: 1.8rem;
-  background-color: rgb(230, 226, 226);
-  padding: 5px;
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+  padding: 18px;
   border-radius: 50%;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 1.95rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.4s;
+  font-family: var(--font-primary);
+  margin: 6px 0px;
 }
 
-.page-wrapper {
-  width: 90%;
-  height: 2px;
-  background-color: grey;
+.leftbar-icon:hover {
 }
+
+.leftbar-icon:active {
+  transform: 0.9em;
+}
+
 .video-card {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 50px;
+  margin-top: 50px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .videos {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  background-color: lightgray;
-  border-radius: 10px;
+  overflow: hidden;
   width: 300px;
-  height: 300px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+.videos:hover {
+  transform: scale(1.02);
 }
 
 .video-details {
-  color: black;
-  font-size: 1.2em;
-  position: absolute;
-  width: 300px;
+  font-size: 1em;
+  padding-top: 15px;
+  text-decoration: none;
+  line-height: 1.3em;
   text-align: left;
-  padding: 10px 5px;
 }
 
 .video-info-text {
   padding-top: 5px;
+  font-weight: bold;
 }
 
 .video-thumbnail {
-  width: 300px;
+  width: 100%;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  object-fit: contain;
 }
 
-h1 {
-  text-align: left;
+@media (max-width: 768px) {
+  .videos {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
 }

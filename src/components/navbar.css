@@ -1,49 +1,113 @@
-.navbar {
+.header {
+  width: 100vw;
   position: fixed;
   top: 0;
-  z-index: 3;
-  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
+  transition: tranform 0.4s;
+  z-index: 100;
+  background-color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-highlight);
+  padding: 4px 0px;
+}
+
+.navbar {
+  width: 100vw;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 70px;
-  border-bottom: 2px solid gray;
+  padding: 15px;
 }
 
-/* .nav-items a {
+.navbar a {
+  transition: transform 0.4s;
+}
+
+.navbar a:hover {
+  color: var(--color-accent);
+  transform: scale(1.1);
+  /* Background color on hover */
+}
+
+.nav-items a {
   color: #fff;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
+.nav-items {
+  display: flex;
+  gap: 30px;
+  vertical-align: middle;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.nav-items img {
+  width: 40px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
 .nav-items a:hover {
   text-decoration: underline;
-} */
-
-.logo {
-  padding-left: 20px;
 }
+
+.logo img {
+  max-width: 220px;
+  transition: transform 0.4s;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
 .search {
   display: flex;
-  gap: 20px;
-  height: 20px;
+  gap: 10px;
 }
 
 .search-bar {
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 105px;
+  padding: 10px 30px;
+  width: 350px;
+  background-color: #b41a1a;
+  font-family: var(--font-primary);
+  font-size: 1em;
+  color: #fff;
+  border: #fff;
+}
+
+.search-bar::placeholder {
+  color: var(--color-text);
+  opacity: 0.7;
 }
 
 .search-button {
-  border-radius: 5px;
+  border-radius: 105px;
   font-size: 1em;
-  padding: 0px 15px;
-  padding-bottom: 20px;
+  padding: 10px 30px;
+  font-family: var(--font-primary);
+  background-color: var(--color-primary);
+  transition: transform 0.6s;
+}
+
+.search-button:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+  background-color: var(--color-highlight);
 }
 
 .nav-items {
   display: flex;
   gap: 10px;
   padding-right: 50px;
+}
+
+.toggleButton {
+  border: none;
+  background-color: var(--color-secondary);
 }

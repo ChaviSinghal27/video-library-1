@@ -1,21 +1,31 @@
 import "./navbar.css";
-
+import logo from "./Tuneit Logo.svg";
+import setting from "./settings.svg";
+import user from "./user.svg";
+import { useTheme } from "../context/themeContext";
 export function Navbar() {
+  const { toggleTheme } = useTheme();
   return (
     <div>
-      <header>
+      <header className="header">
         <nav className="navbar">
           <div className="logo">
-            <p>WeWatch</p>
+            <img src={logo} alt="TuneIt Logo" />
           </div>
           <div className="search">
-            <input className="search-bar" placeholder="search" />
+            <input
+              className="search-bar"
+              placeholder="what you are looking for..."
+            />
 
-            <button className="search-button">search</button>
+            <button className="search-button">SEARCH</button>
           </div>
           <div className="nav-items">
-            <p>setting</p>
-            <p>Account</p>
+            <button className="toggleButton" onClick={toggleTheme}>
+              {" "}
+              <img src={setting} alt="setting icon" />
+            </button>
+            <img src={user} alt="user icon" />
           </div>
         </nav>
       </header>

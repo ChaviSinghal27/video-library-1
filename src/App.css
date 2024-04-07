@@ -2,6 +2,64 @@
   text-align: center;
 }
 
+.dark {
+  background-color: #292929;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.pagetitle {
+  font-weight: 800;
+  font-size: 2.3em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+}
+
+.app-content {
+  padding: auto;
+  margin-left: 15%;
+  margin-right: 5%;
+}
+
+.nav-component {
+  padding-bottom: 100px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "Figtree", sans-serif;
+}
+
+.primary-text {
+  font-family: "Figtree", sans-serif;
+}
+
+.semi-bold-text {
+  font-family: "Figtree", sans-serif;
+}
+
+.bold-text {
+  font-family: "Figtree", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,26 +72,35 @@
 }
 
 .App-link {
-  color: #61dafb;
-}
-
-.app-content {
-  margin-left: 15%;
-}
-
-.nav-component {
-  padding-bottom: 100px;
+  color: var(--color-accent);
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.recolata {
-  font-family: Recolata;
+.header {
+  font-family: "Figtree", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-highlight);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
 }

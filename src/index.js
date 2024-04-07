@@ -7,16 +7,19 @@ import reportWebVitals from "./reportWebVitals";
 import { HistoryProvider } from "./context/historyContext";
 
 import { PlaylistProvider } from "./context/playlistContext";
+import { ThemeProvider } from "./context/themeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <HistoryProvider>
-        <PlaylistProvider>
-          <App />
-        </PlaylistProvider>
-      </HistoryProvider>
+      <ThemeProvider>
+        <HistoryProvider>
+          <PlaylistProvider>
+            <App />
+          </PlaylistProvider>
+        </HistoryProvider>
+      </ThemeProvider>
     </Router>
   </React.StrictMode>
 );

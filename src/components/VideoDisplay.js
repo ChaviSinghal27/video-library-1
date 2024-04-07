@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useHistoryContext } from "../context/historyContext";
 import "../pages/Home/home.css";
+import { useTheme } from "../context/themeContext";
 
 export function VideoDisplay({ videoData }) {
   const { dispatch } = useHistoryContext();
-
+  const { theme } = useTheme();
   return (
     <div>
       <div className="video-card">
@@ -20,9 +21,11 @@ export function VideoDisplay({ videoData }) {
                 >
                   <img src={video.URL} className="video-thumbnail" />
 
-                  <div className="video-details">
-                    <div>{video.VideoTitle}</div>
-                    <div className="video-info-text">{video.VideoViews}</div>
+                  <div className={theme}>
+                    <div className="video-details">{video.VideoTitle}</div>
+                    <div className="video-info-text">
+                      {video.VideoViews} views
+                    </div>
                   </div>
                 </div>
               </Link>

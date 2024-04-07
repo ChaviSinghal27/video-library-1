@@ -3,21 +3,20 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { LeftBar } from "./components/Leftbar";
 import { Router } from "./Router/Router";
-
+import { useTheme } from "../src/context/themeContext";
 function App() {
+  const { theme } = useTheme();
   return (
-    <div className="App">
+    <div className={theme}>
       <div className="nav-component">
         <Navbar />
       </div>
-
       <div>
-        <div>
-          <LeftBar />
-        </div>
-        <div className="app-content">
-          <Router />
-        </div>
+        <LeftBar />
+      </div>
+
+      <div className="app-content">
+        <Router />
       </div>
     </div>
   );

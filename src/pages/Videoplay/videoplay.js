@@ -43,16 +43,15 @@ export function VideoPlay() {
       <div className="video-description">
         <div className="video-info">
           <div>{currentVideo[0].VideoTitle} </div>
-          <div>{currentVideo[0].VideoViews}</div>
+          <div className="views">{currentVideo[0].VideoViews}</div>
         </div>
 
         <div className="video-buttons">
-          <button>
-            <i class="fa-solid fa-clock"></i>
-          </button>
           <button
             style={{
-              color: addToLike.includes(currentVideo[0].id) ? "red" : "Black",
+              color: addToLike.includes(currentVideo[0].id)
+                ? "#8a1111"
+                : "#e71b1b",
             }}
             onClick={() => likeHandler()}
           >
@@ -61,8 +60,8 @@ export function VideoPlay() {
           <button
             style={{
               color: addToPlaylist.includes(currentVideo[0].id)
-                ? "red"
-                : "black",
+                ? "#8a1111"
+                : "#e71b1b",
             }}
             onClick={() => watchListHandler()}
           >

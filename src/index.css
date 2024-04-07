@@ -1,1 +1,19 @@
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
 
+:root {
+  --color-primary: #fff6f6;
+  --color-secondary: #e71b1b;
+  --color-text: #fafafa;
+  --color-accent: #fbce08;
+  --color-highlight: #fbce08;
+  --color-dark: #8a1111;
+}
+
+/* You can use these variables throughout your stylesheets */
+
+:root {
+  --font-primary: "Figtree", sans-serif;
+}
